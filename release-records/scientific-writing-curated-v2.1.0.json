@@ -1,0 +1,53 @@
+{
+  "release": "scientific-writing-curated-v2.1.0",
+  "name": "scientific-writing-curated",
+  "upstreamVersion": "2.1",
+  "distributionVersion": "2.1.0",
+  "createdAt": "2026-09-21T03:30:38.707249+00:00",
+  "upstream": {
+    "repository": "https://github.com/K-Dense-AI/scientific-agent-skills",
+    "commit": "330c8e764435a731eff571e3efdda70b363d0792",
+    "path": "skills/scientific-writing",
+    "version": "2.1",
+    "directoryTree": "ae5fac6462c292e31e8f75337ad4735c127146b4",
+    "fetchedAt": "2026-09-21T02:59:48.221Z"
+  },
+  "replaces": {
+    "removedCurrentPackage": "scientific-writing-opencode",
+    "oldDirectoryFilesRemoved": 2,
+    "historyRewritten": false
+  },
+  "changes": "31 upstream files preserved; only SKILL frontmatter name changed; exact root license and provenance added. No optional scientific or implementation patches.",
+  "manifestSha256": "2a7b7b231012af4d45bd43f7862ec5dfe9e5d8942d0a206c6801f29f774fd3f2",
+  "package": {
+    "name": "scientific-writing-curated-v2.1.0.zip",
+    "sha256": "f95ba2c9171841a42bdc539437a9c7e1a78f84a38e11c0f0463ad32462f20d26",
+    "files": 33
+  },
+  "validation": {
+    "upstreamFileCount": 31,
+    "upstreamFilesByteIdenticalExceptName": true,
+    "zipMatchesDistribution": true,
+    "pythonSyntaxFiles": 9,
+    "reusedEvidence": "Same upstream bytes previously passed reporting-guideline routing, scaffold generation, overwrite rejection and placeholder rejection. Candidate-name loading/resource access was user-confirmed; curated-name install awaits user.",
+    "ciWorkflow": ".github/workflows/validate.yml",
+    "ciBinding": "Check the successful workflow on the commit referenced by this release tag.",
+    "localStaticReleaseCheck": {
+      "passed": true,
+      "skills": 8,
+      "runtimeFiles": 78,
+      "candidateCodeExecuted": false
+    },
+    "quickValidator": {
+      "passed": false,
+      "reason": "Local generic quick_validate.py omits upstream compatibility from its allowed keys; upstream field retained unchanged.",
+      "yamlSupplement": "YAML parsed; original metadata keys and values retained except the authorized name. Prior user-confirmed OpenCode loading accepted this exact upstream frontmatter structure."
+    }
+  },
+  "installation": "User-managed CC Switch removal of old named entry and repository installation of new named entry; not performed by this publication.",
+  "limits": [
+    "No new model or scientific-task execution",
+    "No full-script or cross-host behavior acceptance",
+    "Other seven skills unchanged"
+  ]
+}

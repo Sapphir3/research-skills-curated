@@ -13,8 +13,16 @@ assert {p.parent.name for p in ROOT.rglob('SKILL.md') if '.git' not in p.parts} 
 files_checked = 0
 for skill in manifest['skills']:
     name = skill['name']
-    assert re.fullmatch(r'[a-z0-9-]+-opencode', name)
-    assert skill['path'] == name and skill['targetApp'] == 'opencode'
+    assert re.fullmatch(r'[a-z0-9-]+-(?:opencode|curated)', name)
+    assert skill['path'] == name
+    if name.endswith('-curated'):
+        assert skill['targetApps'] == ['codex', 'opencode']
+        assert re.fullmatch(r'[0-9]+\.[0-9]+\.[0-9]+', skill['distributionVersion'])
+        assert re.fullmatch(r'[0-9a-f]{40}', skill['upstream']['directoryTree'])
+        assert (ROOT / name / 'UPSTREAM_SOURCE.md').is_file()
+    else:
+        assert skill['targetApp'] == 'opencode'
+        assert skill['acceptedAdapter']['skillSha256']
     directory = ROOT / name
     files = {p.relative_to(directory).as_posix(): p for p in directory.rglob('*') if p.is_file()}
     assert set(files) == set(skill['files']), f'{name}: extra or missing runtime file'
@@ -37,5 +45,5 @@ for skill in manifest['skills']:
     assert re.search(r'^name:\s*'+re.escape(name)+r'\s*$',frontmatter,re.M)
     assert re.search(r'^  version:\s*"'+re.escape(skill['version'])+r'"\s*$',frontmatter,re.M)
     assert 'LICENSE' in files or 'LICENSE.md' in files
-    assert skill['upstream']['commit'] and skill['acceptedAdapter']['skillSha256']
+    assert re.fullmatch(r'[0-9a-f]{40}', skill['upstream']['commit'])
 print(json.dumps({'passed':True,'skills':len(names),'runtimeFiles':files_checked,'candidateCodeExecuted':False}))
