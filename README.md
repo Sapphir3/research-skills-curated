@@ -1,40 +1,33 @@
-# Research skills curated
+# research-skills-curated
 
-Personal distribution of selected research skills from [K-Dense scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills), separate from [homemade skills](https://github.com/Sapphir3/codex-skills-homemade).
+为本地 **Codex 和 OpenCode** 工作流挑选、保存和分发 skills 的中转缓冲仓库。这里保留经过选择的固定上游副本，便于追溯来源、检查更新和恢复已采用版本，避免本地安装直接跟随上游变化或依赖上游持续可用。
 
-`scientific-writing-curated` contains the complete upstream scientific-writing 2.1 skill for Codex and OpenCode. Its methods, scripts, templates and references are unchanged; only the installable name differs, and the package adds the original license and [source/update information](scientific-writing-curated/UPSTREAM_SOURCE.md). It replaces the removed, shortened `scientific-writing-opencode` package. The other seven packages retain their previous contents; this release makes no new compatibility or scientific-quality claim for them.
+默认保留上游的方法、脚本、参考资料和输出能力；只有实际宿主接入确有必要时才作最小修改并记录。`-curated` 后缀用于区分本仓库分发副本，不表示 OpenCode 专用版或效果提升。
 
-## Available skills
+## 当前使用与分发的技能
 
-| Category | Installable name | Distribution scope |
-| --- | --- | --- |
-| Writing and review | scientific-writing-curated | Complete upstream; Codex and OpenCode |
-| Literature | paper-lookup-opencode | Existing OpenCode package |
-| Theory and methods | sympy-opencode | Existing OpenCode package |
-| Theory and methods | uncertainty-and-units-opencode | Existing OpenCode package |
-| Design and analysis | experimental-design-opencode | Existing OpenCode package |
-| Design and analysis | statistical-analysis-opencode | Existing OpenCode package |
-| Writing and review | peer-review-opencode | Existing OpenCode package |
-| Presentation | scientific-slides-opencode | Existing OpenCode package |
+当前仅收录以下 **1 项**。本表列出本仓库采用的技能，不是本机全部安装项或运行验证清单。
 
-Each installable skill has one top-level directory. [manifest.json](manifest.json) records its upstream identity, dependencies and exact file hashes. The scientific-writing upstream version remains `2.1`; its first complete curated distribution is `2.1.0`. Skills provide resources; they do not define fixed role assignments, grant tool permissions or change models.
+| 本仓库技能 | 分类 | 简要作用 | 原技能与官方仓库 | 采用的上游版本 | 上游最新版本（核查时） |
+| --- | --- | --- | --- | --- | --- |
+| [scientific-writing-curated](scientific-writing-curated/) | 科研写作 | 论文与报告起草、修订；证据追溯、报告规范、署名声明及本地一致性检查 | `scientific-writing` · [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/scientific-writing) | `2.1` · [`330c8e7`](https://github.com/K-Dense-AI/scientific-agent-skills/tree/330c8e764435a731eff571e3efdda70b363d0792/skills/scientific-writing) | `2.1` · 同一提交，技能内容一致 |
 
-## Install and update
+版本核查时间：**2026-09-21 12:00（北京时间，UTC+8）**。“最新”是该时点的查询结果，不会自动刷新。
 
-1. In CC Switch, use `https://github.com/Sapphir3/research-skills-curated`, branch `main`.
-2. For scientific writing, remove the old `scientific-writing-opencode` installation and install `scientific-writing-curated` from the repository listing. The name and repository path changed, so do not assume that updating the old entry will migrate it. Enable the new entry for Codex and/or OpenCode as needed. Other differently named skills are not removed by this release.
-3. Follow the host's normal reload procedure at a suitable task boundary and verify the actual discovered path. Any custom name-based permissions or pinned skill paths must refer to `scientific-writing-curated`; the package does not edit host configuration. CC Switch app switches alone do not prove discovery isolation.
+- 采用及本次最新的上游 `main` 提交：`330c8e764435a731eff571e3efdda70b363d0792`。
+- 上游技能路径：`skills/scientific-writing`；采用及本次最新的目录 Git tree：`ae5fac6462c292e31e8f75337ad4735c127146b4`。
+- 本仓库分发版本：[`scientific-writing-curated-v2.1.0`](https://github.com/Sapphir3/research-skills-curated/releases/tag/scientific-writing-curated-v2.1.0)。保留全部 31 个上游技能文件，仅修改 `SKILL.md` 的名称，并补充原许可证及[来源说明](scientific-writing-curated/UPSTREAM_SOURCE.md)，共 33 个文件。
 
-The reviewed `main` branch is the update channel. A release ZIP is an offline snapshot; importing it alone does not retain GitHub source tracking. No automatic update, dependency installation or upstream execution is enabled. Use the actual discovered skill root and an existing compatible interpreter when running optional scripts; outputs belong in the authorized task project.
+## 使用与更新
 
-## Maintenance and provenance
+在 CC Switch 中添加本仓库 `https://github.com/Sapphir3/research-skills-curated`，选择 `main` 分支下的 `scientific-writing-curated`，按需安装到 Codex 和 OpenCode。依赖和使用方法见该技能的 [SKILL.md](scientific-writing-curated/SKILL.md)。
 
-Use [scientific-writing-curated/UPSTREAM_SOURCE.md](scientific-writing-curated/UPSTREAM_SOURCE.md) to compare the upstream main directory with the fixed commit and skill tree. Review changes before adoption; preserve the upstream methods and resources. Make a host compatibility change only when an actual execution obstacle requires it, preserving the original methods and output capability. Optional improvements require separate task evidence and a maintenance decision.
+1. 检查表中的官方仓库及技能路径，将当前上游 `main` 与已采用提交比较。版本号可能不变，仓库新提交也可能只涉及其他技能；以该技能目录的 tree 或文件差异判断是否更新，并核对相关许可和依赖变化。
+2. 确认变更适合当前用途后，手动更新本仓库副本、必要的来源说明及本表版本和核查时间，保留可恢复的已采用版本。不自动跟随或合并上游。
+3. 从本仓库通过 CC Switch 更新本地安装。仓库更新与本地安装是两个独立步骤。
 
-Run `python -B tests/validate_release.py` before publication. CI uses the same static content, Python syntax and resource-link checks; it does not execute skill code or certify scientific correctness. Retain applicable execution evidence when files and assumptions are unchanged. Tags and single-skill ZIPs identify immutable versions; old release records are history, not current installation recommendations. Correct or revert the main branch with normal commits rather than rewriting that history.
+技能内来源说明提及的旧 `manifest` 保存在[固定发布版本](https://github.com/Sapphir3/research-skills-curated/blob/scientific-writing-curated-v2.1.0/manifest.json)中；当前收录清单以本 README 为准。Git 历史与既有发布保留用于追溯，旧发布所含的其他技能不属于当前收录范围。
 
-The synchronized editing source, device-local Git checkout and CC Switch installation remain distinct. Keep `.git` outside synchronized source trees. This release does not operate CC Switch, WebDAV, other computers, workflow models or permissions.
+## 许可
 
-## License
-
-Preserve the MIT notices in each package. External libraries and services retain their own licenses and access conditions. This repository contains no credentials or research inputs.
+仓库维护文档采用 [MIT License](LICENSE)。上游技能的版权归原作者所有，原 MIT 声明完整保留于 [scientific-writing-curated/LICENSE.md](scientific-writing-curated/LICENSE.md)；本仓库不改变其授权条件。
