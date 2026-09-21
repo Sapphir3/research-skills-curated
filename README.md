@@ -4,7 +4,7 @@
 
 ## 当前范围与命名
 
-本次目标范围为保留清单中的 **70 项**：原有 8 项加计划新增 62 项。实际收录 **65 项（新增 57 项，原有 8 项恢复原名）**；另 5 项因许可问题暂缓，仅保留分类和上游链接。原清单另有 3 项未纳入本次收录。
+保留清单共 **73 项**，当前实际收录 **68 项**；另 5 项因许可问题暂缓，仅保留分类和上游链接。所有已收录技能保留原始调用名称。
 
 技能使用原始调用名称，**不添加 `-curated`**。仓库名保持不变。`researchwrite` 的上游目录名为 `nature-proposal-writer`，两者关系保留；`nature-shared` 是共享依赖，保留关闭隐式调用的原设置。需要 Nature 共享资料的技能应连同 `nature-shared` 安装。
 
@@ -14,7 +14,7 @@
 
 ## 分类清单
 
-以下整合原清单的 **73 项、7 个大方向、31 个细分方向**，分类和顺序不变。73 是保留目录条目数，65 才是本仓库当前可分发技能数。`markdown-mermaid-writing` 来源已按本次决定更正为 K-Dense 的完整技能包；原作者归属与许可保留在来源记录中。
+以下整合原清单的 **73 项、7 个大方向、31 个细分方向**，分类和顺序不变。73 是保留目录条目数，68 才是本仓库当前可分发技能数。`markdown-mermaid-writing` 来源已按本次决定更正为 K-Dense 的完整技能包；原作者归属与许可保留在来源记录中。
 
 用途和重叠说明沿用用户清单，属于功能定位说明，不是本轮执行测试结论。“高重叠”不表示可以完整替代。
 
@@ -110,7 +110,7 @@
 | Skill 名称 | GitHub 来源仓库 | 用途简介 | 备注：区分与重叠 |
 |---|---|---|---|
 | [paper-lookup](paper-lookup/) | [K-Dense-AI/scientific-agent-skills][repo-3] | 通过多种学术 API 查询论文、标识符、引用、开放全文与仓储记录。 | 与 nature-academic-search 高重叠；侧重明确 API、分页与可复现来源。  已收录；[固定来源](paper-lookup/UPSTREAM_SOURCE.md)。 |
-| `nature-academic-search` | [wp-a/nature-academic-search][repo-10] | 协调多源检索、MeSH 策略、引用关系、他引审计与引文文件管理。 | 检索/核引与 paper-lookup、citation-management 重叠；特色是严格他引与引文上下文。  **未纳入本次收录范围**。 |
+| [nature-academic-search](nature-academic-search/) | [wp-a/nature-academic-search][repo-10] | 协调多源检索、MeSH 策略、引用关系、他引审计与引文文件管理。 | **不默认开启，今后需要时再使用。** |
 | [exa-search](exa-search/) | [K-Dense-AI/scientific-agent-skills][repo-3] | 通过 Exa 做网页语义检索、论文类别筛选与 URL 内容提取。 | 与论文检索部分重叠；独立价值是 Exa 搜索与网页提取渠道，非书目 API。  已收录；[固定来源](exa-search/UPSTREAM_SOURCE.md)。 |
 | [database-lookup](database-lookup/) | [K-Dense-AI/scientific-agent-skills][repo-3] | 按具名公共数据库的端点、筛选条件与分页规则查询并记录来源。 | 与 paper-lookup 的查询方法重叠；不限于论文、引用等学术记录。  已收录；[固定来源](database-lookup/UPSTREAM_SOURCE.md)。 |
 
@@ -120,7 +120,7 @@
 
 | Skill 名称 | GitHub 来源仓库 | 用途简介 | 备注：区分与重叠 |
 |---|---|---|---|
-| `nature-downloader` | [Yuan1z0825/nature-skills][repo-6] | 通过开放获取、出版商 API 或授权机构访问获取全文及补充材料。 | 开放全文定位与 paper-lookup 重叠；补充机构访问及 Supporting Information 路线。  **未纳入本次收录范围**。 |
+| [nature-downloader](nature-downloader/) | [Yuan1z0825/nature-skills][repo-6] | 通过开放获取、出版商 API 或授权机构访问获取全文及补充材料。 | **不默认开启，今后需要时再使用。** |
 | [bgpt-paper-search](bgpt-paper-search/) | [K-Dense-AI/scientific-agent-skills][repo-3] | 通过 BGPT MCP 返回由论文全文抽取的实验方法、样本量及结果等字段。 | 直接查询结构化实验记录；不同于下载全文，也不能替代原文核验。  已收录；[固定来源](bgpt-paper-search/UPSTREAM_SOURCE.md)。 |
 
 ### 2.3 多篇文献综合与单篇深读
@@ -174,7 +174,7 @@
 |---|---|---|---|
 | [venue-templates](venue-templates/) | [K-Dense-AI/scientific-agent-skills][repo-3] | 选择期刊、会议或基金模板，检查页数、匿名及提交格式。 | 投稿材料与 writing/grants 重叠；侧重格式与规则，不负责核心科学论证。  已收录；[固定来源](venue-templates/UPSTREAM_SOURCE.md)。 |
 | [nature-statistics](nature-statistics/) | [Yuan1z0825/nature-skills][repo-6] | 审查或起草论文中的统计方法、图注、效应量、区间与重复数表述。 | 与统计分析/审稿重叠；侧重“论文如何报告”，不等于重做原始统计分析。  已收录；[固定来源](nature-statistics/UPSTREAM_SOURCE.md)。 |
-| `nature-data` | [Yuan1z0825/nature-skills][repo-6] | 撰写数据/代码可用性声明，组织仓储、数据集引用与 FAIR 元数据。 | 简单声明可与 writing 重叠；补充仓储计划、访问限制与元数据检查。  **未纳入本次收录范围**。 |
+| [nature-data](nature-data/) | [Yuan1z0825/nature-skills][repo-6] | 撰写数据/代码可用性声明，组织仓储、数据集引用与 FAIR 元数据。 | **不默认开启，今后需要时再使用。** |
 
 ### 3.4 共享写作参考与依赖
 
@@ -350,11 +350,10 @@ CC Switch 仓库地址：`https://github.com/Sapphir3/research-skills-curated`�
 
 ## 许可与暂缓项
 
-仓库维护文档采用 [MIT License](LICENSE)。**各技能依其自身许可证分发，并非全部适用 MIT**。K-Dense、Obsidian、自建技能及 PPT Master 保留其 MIT 声明与组件许可；Nature 技能保留 Apache-2.0；ARS 使用 **CC-BY-NC-4.0（非商业）**，须遵守署名、非商业使用和组件声明。Markdown/Mermaid 包同时保留原作者 Apache-2.0 声明。
+仓库维护文档采用 [MIT License](LICENSE)。**各技能依其自身许可证分发，并非全部适用 MIT**。K-Dense、Obsidian、自建技能及 PPT Master 保留其 MIT 声明与组件许可；Nature 技能保留各自许可：`nature-downloader` 为目录内 MIT，另附仓库级 Apache-2.0 声明；其他已收录 Yuan1z0825/nature-skills 技能为 Apache-2.0；`nature-academic-search` 为 MIT；ARS 使用 **CC-BY-NC-4.0（非商业）**，须遵守署名、非商业使用和组件声明。Markdown/Mermaid 包同时保留原作者 Apache-2.0 声明。
 
 `pdf`、`docx`、`xlsx`、`pptx`：所核查的 Anthropic 上游许可证明确限制复制、改作及再分发，未上传技能原文。`ppt-speech-writer`：所核查的 AI272/speaker v0.8.0 未找到再分发许可证，暂不上传。以上 5 项经用户决定暂缓，不用来源占位文件伪装为已收录技能。
 
-`nature-academic-search`、`nature-downloader`、`nature-data`：不属于本次 70 项范围，仅保留原清单条目；不改变其本机开关。
 
 <!-- Repository and documentation references. Standard Markdown links remain portable. -->
 [repo-1]: https://github.com/AI272/speaker
