@@ -6,7 +6,7 @@
 
 ## 当前收录
 
-共 **7 项**；本表是仓库分发清单，不是本机安装或运行验收清单。
+共 **8 项**；本表是仓库分发清单，不是本机安装或运行验收清单。
 
 | 本仓库技能 | 分类 | 简要作用 | 原技能与官方仓库 | 采用的上游版本 | 上游最新版本（核查时） |
 | --- | --- | --- | --- | --- | --- |
@@ -17,6 +17,7 @@
 | [statistical-analysis-curated](statistical-analysis-curated/) | 统计分析 | 检验选择、假设诊断、效应量/功效、贝叶斯方法与统计报告 | `statistical-analysis` · [官方目录](https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/statistical-analysis) | `1.2` · [`330c8e7`](https://github.com/K-Dense-AI/scientific-agent-skills/tree/330c8e764435a731eff571e3efdda70b363d0792/skills/statistical-analysis) | `1.2` · 同一提交，技能内容一致 |
 | [sympy-curated](sympy-curated/) | 符号计算 | 代数、微积分、方程、矩阵、物理/力学及代码生成 | `sympy` · [官方目录](https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/sympy) | `1.3` · [`330c8e7`](https://github.com/K-Dense-AI/scientific-agent-skills/tree/330c8e764435a731eff571e3efdda70b363d0792/skills/sympy) | `1.3` · 同一提交，技能内容一致 |
 | [uncertainty-and-units-curated](uncertainty-and-units-curated/) | 单位与测量不确定度 | 单位/温标换算、GUM 与蒙特卡洛传播、预算、有效数字和量纲审计 | `uncertainty-and-units` · [官方目录](https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/uncertainty-and-units) | `1.1` · [`330c8e7`](https://github.com/K-Dense-AI/scientific-agent-skills/tree/330c8e764435a731eff571e3efdda70b363d0792/skills/uncertainty-and-units) | `1.1` · 同一提交，技能内容一致 |
+| [scientific-slides-curated](scientific-slides-curated/) | 科研演示 | PowerPoint/Beamer、科研演讲结构、图像生成、渲染与基础校验 | `scientific-slides` · [官方目录](https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/scientific-slides) | `1.8` · [`330c8e7`](https://github.com/K-Dense-AI/scientific-agent-skills/tree/330c8e764435a731eff571e3efdda70b363d0792/skills/scientific-slides) | `1.8` · 同一提交，技能内容一致 |
 
 “最新”仅指以下查询时点，不会自动刷新；完整提交、tree 和更新比较入口见对应来源说明。
 
@@ -27,6 +28,7 @@
 - [statistical-analysis-curated](statistical-analysis-curated/UPSTREAM_SOURCE.md)：2026-09-21T06:29:05.674249+00:00（UTC）。
 - [sympy-curated](sympy-curated/UPSTREAM_SOURCE.md)：2026-09-21T06:33:14.625944+00:00（UTC）。
 - [uncertainty-and-units-curated](uncertainty-and-units-curated/UPSTREAM_SOURCE.md)：2026-09-21T06:37:39.482276+00:00（UTC）。
+- [scientific-slides-curated](scientific-slides-curated/UPSTREAM_SOURCE.md)：2026-09-21T06:41:19.017416+00:00（UTC）。
 
 ## 使用与更新
 
