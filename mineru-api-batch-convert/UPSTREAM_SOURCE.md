@@ -3,17 +3,17 @@
 - Original repository: https://github.com/Sapphir3/codex-skills-homemade
 - Original skill name: `mineru-api-batch-convert`
 - Upstream path: `paper-library-skills/mineru-api-batch-convert`
-- Selected reference: `mineru-api-batch-convert-v2.0.0`
-- Fixed commit: `84f3928449eaee32fd42777135b544137acdd42c`
-- Skill directory Git tree: `56a40bee69cc928b658658c1bbfb6e709c1e4ff8`
-- Source: https://github.com/Sapphir3/codex-skills-homemade/tree/84f3928449eaee32fd42777135b544137acdd42c/paper-library-skills/mineru-api-batch-convert
-- Source query (or original acquisition for retained snapshots): `2026-09-21T11:35:36.498209+00:00`
-- Acquired into this distribution from the verified local snapshot: `2026-09-21T11:49:46.619987+00:00`
+- Selected reference: `mineru-api-batch-convert-v2.0.1`
+- Fixed commit: `80dda149af5f6836284b61f713a643509d66c922`
+- Skill directory Git tree: `b3a23f21129ece4ac92113affd2cc106cfd2fe8a`
+- Source: https://github.com/Sapphir3/codex-skills-homemade/tree/80dda149af5f6836284b61f713a643509d66c922/paper-library-skills/mineru-api-batch-convert
+- Source query (or original acquisition for retained snapshots): `2026-09-26T08:32:26.620113+00:00`
+- Acquired into this distribution from the verified local snapshot: `2026-09-26T08:32:26.620113+00:00`
 - Upstream declared skill version: `not declared`
-- Distribution name: `mineru-api-batch-convert`; directory: `mineru-api-batch-convert`; distribution version: `2.0.0`
+- Distribution name: `mineru-api-batch-convert`; directory: `mineru-api-batch-convert`; distribution version: `2.0.1`
 - License: MIT; retain all bundled third-party notices. See [LICENSE](LICENSE) and all component notices.
 
-Latest stable upstream release: [mineru-api-batch-convert-v2.0.0](https://github.com/Sapphir3/codex-skills-homemade/releases/tag/mineru-api-batch-convert-v2.0.0), published 2026-09-07T07:27:04Z.
+Latest stable upstream release: [mineru-api-batch-convert-v2.0.1](https://github.com/Sapphir3/codex-skills-homemade/releases/tag/mineru-api-batch-convert-v2.0.1), published 2026-09-26T08:15:54Z.
 
 ## Preservation and changes
 
